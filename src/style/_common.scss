@@ -1,0 +1,18 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      width: 100%;
+      font-family: 'font-regular', 'font-medium', 'font-black', sans-serif;
+      // max-width: 1024px;
+      overflow-y: hidden;
+      margin: 0;
+      color: #000;
+      user-select: none;
+      background-color: #ffff;
+      // background: url("../src/images/bg.png");
+      // background-size: 1024px;
+}
