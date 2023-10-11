@@ -1,0 +1,11 @@
+.slider-3{
+    height: 100%;
+    background-color: blue;
+    position: relative;
+
+    &__image{
+        top: 100px;
+        left: 40px;
+        position: absolute;
+    }
+}
