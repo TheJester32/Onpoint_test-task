@@ -5,7 +5,6 @@ const sliderDraggableClassName = 'slider__draggable';
 
 export default class bigSlider {
     constructor(element, options = {}) {
-        console.log('test');
         this.containerNode = element;
         this.size = element.childElementCount;
         this.currentSlide = 0;

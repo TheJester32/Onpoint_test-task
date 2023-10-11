@@ -1,0 +1,222 @@
+.slider-1 {
+    height: 100%;
+    background: url("../src/images/bg.png");
+    background-size: 100%;
+    position: relative;
+
+    &__text {
+        padding-top: 220px;
+    }
+
+    &__hello {
+        font-family: 'DINpro';
+        font-weight: 400px;
+        text-transform: uppercase;
+        font-size: 35px;
+        padding-left: 80px;
+        line-height: 60px;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        font-family: 'DINpro';
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        letter-spacing: 0.1em;
+        font-size: 100px;
+        padding-left: 70px;
+        line-height: 100px;
+    }
+
+    &__title-no {
+        font-family: 'Gilroy';
+        font-weight: 800px;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-size: 100px;
+    }
+
+    &__button {
+        position: absolute;
+        left: 615px;
+        bottom: 190px;
+    }
+
+    &__stick {
+        position: absolute;
+        top: 100px;
+        left: -20px;
+    }
+
+    &__lymphocyte {
+        position: absolute;
+        bottom: -10px;
+        left: 570px;
+        animation: pulsing 6s infinite;
+    }
+
+    &__sperm {
+        position: absolute;
+        left: 410px;
+        top: 222px;
+        z-index: 3;
+    }
+
+    &__cell-cutted {
+        position: absolute;
+        left: 360px;
+        bottom: 70px;
+
+    }
+
+    &__cell-cutted-2 {
+        position: absolute;
+        left: 910px;
+        top: 30px;
+    }
+
+    &__blue-cell {
+        position: absolute;
+        z-index: 0;
+        left: 30px;
+        bottom: 163px;
+        animation: movingImage 8s infinite cubic-bezier(0, 0, 0, 0);
+    }
+
+    &__blue-cell-2 {
+        position: absolute;
+        left: 670px;
+        top: 100px;
+        animation: movingImage-2 8s infinite cubic-bezier(0, 0, 0, 0);
+    }
+
+    &__small-lymphocyte {
+        z-index: 5;
+        position: absolute;
+        left: 790px;
+        top: 240px;
+        animation: circularMotion 20s linear infinite;
+    }
+
+}
+
+@keyframes pulsing {
+    0% {
+        -webkit-transform: scale(0.8, 0.8) translateX(2px);
+        transform: scale(0.8, 0.8) translateX(2px);
+    }
+
+    70% {
+        -webkit-transform: scale(0.8, 0.8) translateX(-12px);
+        transform: scale(1, 1) translateX(-12px);
+    }
+
+    100% {
+        -webkit-transform: scale(0.8, 0.8) translateX(2px);
+        transform: scale(0.8, 0.8) translateX(2px);
+    }
+}
+
+@keyframes movingImage {
+    0% {
+        transform: translate(10px, 0px);
+    }
+
+    25% {
+        transform: translate(8px, 8px);
+    }
+
+    30% {
+        transform: translate(12px, 12px);
+    }
+
+    35% {
+        transform: translate(15px, 15px);
+    }
+
+    45% {
+        transform: translate(20px, 20px);
+    }
+
+    50% {
+        transform: translate(25px, 25px);
+    }
+
+    65% {
+        transform: translate(20px, 20px);
+    }
+
+    75% {
+        transform: translate(15px, 15px);
+    }
+
+    80% {
+        transform: translate(12px, 12px);
+    }
+
+    90% {
+        transform: translate(8px, 8px);
+    }
+
+    100% {
+        transform: translate(10px, 0px);
+    }
+}
+
+@keyframes movingImage-2 {
+    0% {
+        transform: translate(15px, 0px);
+    }
+
+    25% {
+        transform: translate(12px, 8px);
+    }
+
+    30% {
+        transform: translate(17px, 17px);
+    }
+
+    35% {
+        transform: translate(23px, 23px);
+    }
+
+    45% {
+        transform: translate(28px, 28px);
+    }
+
+    50% {
+        transform: translate(34px, 34px);
+    }
+
+    65% {
+        transform: translate(28px, 28px);
+    }
+
+    75% {
+        transform: translate(23px, 23px);
+    }
+
+    80% {
+        transform: translate(17px, 17px);
+    }
+
+    90% {
+        transform: translate(12px, 12px);
+    }
+
+    100% {
+        transform: translate(15px, 0px);
+    }
+}
+
+@keyframes circularMotion {
+    0% {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+  
