@@ -9,7 +9,6 @@ export default class bigSlider {
         this.size = element.childElementCount;
         this.currentSlide = 0;
         this.currentSlideWasChanged = false;
-
         this.manageHTML = this.manageHTML.bind(this);
         this.setParameters = this.setParameters.bind(this);
         this.setEvents = this.setEvents.bind(this);
@@ -18,6 +17,9 @@ export default class bigSlider {
         this.stopDrag = this.stopDrag.bind(this);
         this.dragging = this.dragging.bind(this);
         this.setStylePosition = this.setStylePosition.bind(this);
+        this.moveHome = this.moveHome.bind(this);
+        this.moveRight = this.moveRight.bind(this);
+        this.changeCurrentSlide = this.changeCurrentSlide.bind(this);
 
         this.manageHTML();
         this.setParameters();
@@ -39,6 +41,9 @@ export default class bigSlider {
                 className: slideClassName
             })
         );
+
+        this.navHome = document.querySelector('.bigSlider-wrapper__global-home');
+        this.navRight = document.querySelector('.slider-1__button');
     }
 
     setParameters() {
@@ -59,6 +64,9 @@ export default class bigSlider {
         this.lineNode.addEventListener('pointerdown', this.startDrag);
         this.lineNode.addEventListener('pointerup', this.stopDrag);
         this.lineNode.addEventListener('pointercancel', this.stopDrag);
+
+        this.navHome.addEventListener('click', this.moveHome);
+        this.navRight.addEventListener('click', this.moveRight);
     }
 
     resizeSlider() {
@@ -78,12 +86,8 @@ export default class bigSlider {
 
     stopDrag() {
         window.removeEventListener('pointermove', this.dragging);
-
         this.containerNode.classList.remove(sliderDraggableClassName);
-
-        this.x = -this.currentSlide * this.width;
-        this.setStylePosition();
-        this.setStyleTransition();
+        this.changeCurrentSlide();
     }
 
     dragging(evt) {
@@ -94,15 +98,39 @@ export default class bigSlider {
 
         this.setStylePosition();
 
-        if(dragShift > 2 && dragShift > 0 && !this.currentSlideWasChanged && this.currentSlide > 0){
+        if (dragShift > 2 && dragShift > 0 && !this.currentSlideWasChanged && this.currentSlide > 0) {
             this.currentSlideWasChanged = true;
             this.currentSlide = this.currentSlide - 1;
         }
 
-        if(dragShift < -2 && dragShift < 0 && !this.currentSlideWasChanged && this.currentSlide < this.size - 1){
+        if (dragShift < -2 && dragShift < 0 && !this.currentSlideWasChanged && this.currentSlide < this.size - 1) {
             this.currentSlideWasChanged = true;
             this.currentSlide = this.currentSlide + 1;
         }
+    }
+
+    moveHome() {
+        if (this.currentSlide = 0) {
+            return;
+        }
+        else if (this.currentSlide = this.currentSlide + 1) {
+            this.currentSlide = this.currentSlide - 1;
+        }
+        else {
+            this.currentSlide = this.currentSlide - 2;
+        }
+        this.changeCurrentSlide();
+    }
+
+    moveRight() {
+        this.currentSlide = this.currentSlide + 1;
+        this.changeCurrentSlide();
+    }
+
+    changeCurrentSlide() {
+        this.x = -this.currentSlide * this.width;
+        this.setStylePosition();
+        this.setStyleTransition();
     }
 
     setStylePosition() {
