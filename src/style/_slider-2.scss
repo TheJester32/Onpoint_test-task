@@ -1,109 +1,109 @@
 .slider-2 {
-    height: 100%;
-    background: url("../src/images/bg2.png");
-    background-size: 110%;
+  height: 100%;
+  background: url("../src/images/bg2.png");
+  background-size: 110%;
+  position: relative;
+
+  &__text {
+    padding-top: 150px;
+  }
+
+  &__msg-text {
     position: relative;
+    z-index: 10;
+    width: 50px;
+    font-family: "DINpro";
+    font-weight: 400px;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    line-height: 40px;
+  }
 
-    &__text {
-        padding-top: 150px;
-    }
+  &__long-text {
+    position: relative;
+    z-index: 10;
+    width: 750px;
+    height: 365px;
+    font-family: "DINpro";
+    font-weight: 400px;
+    font-size: 24px;
+    padding-left: 75px;
+    line-height: 28px;
+    overflow-y: scroll;
+  }
 
-    &__msg-text {
-        position: relative;
-        z-index: 10;
-        width: 50px;
-        font-family: 'DINpro';
-        font-weight: 400px;
-        text-transform: uppercase;
-        font-size: 35px;
-        padding-left: 40px;
-        padding-bottom: 50px;
-        line-height: 40px;
-    }
+  &__long-text-container {
+    direction: rtl;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 40px;
+    text-align: left;
+  }
 
-    &__long-text {
-        position: relative;
-        z-index: 10;
-        width: 750px;
-        height: 365px;
-        font-family: 'DINpro';
-        font-weight: 400px;
-        font-size: 24px;
-        padding-left: 75px;
-        line-height: 28px;
-        overflow-y: scroll;
-    }
+  &__long-text-first-words {
+    font-weight: bolder;
+  }
 
-    &__long-text-container{
-        direction: rtl;
-        display: flex;
-        flex-direction: row-reverse;
-        padding-left: 40px;
-        text-align: left;
-    }
+  &__back {
+    position: absolute;
+    z-index: 9;
+    top: 250px;
+    left: 100px;
+    box-shadow: -41px -14px 46px -17px rgba(0, 137, 242, 0.2);
+  }
 
-    &__long-text-first-words {
-        font-weight: bolder;
-    }
+  &__short-sperm {
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    top: 450px;
+  }
 
-    &__back {
-        position: absolute;
-        z-index: 9;
-        top: 250px;
-        left: 100px;
-        box-shadow: -41px -14px 46px -17px rgba(0, 137, 242, 0.2);
-    }
+  &__biggest-sperm {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+  }
 
-    &__short-sperm {
-        position: absolute;
-        z-index: 10;
-        right: 0px;
-        top: 450px;
-    }
+  &__medium-sperm {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+  }
 
-    &__biggest-sperm {
-        position: absolute;
-        right: 0px;
-        top: 100px;
-    }
+  &__small-sperm {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+  }
 
-    &__medium-sperm {
-        position: absolute;
-        right: 0px;
-        top: 100px;
-    }
-
-    &__small-sperm {
-        position: absolute;
-        right: 0px;
-        top: 50px;
-    }
-
-    &__smallest-sperm {
-        position: absolute;
-        right: 0px;
-        top: 550px;
-    }
+  &__smallest-sperm {
+    position: absolute;
+    right: 0px;
+    top: 550px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .animation {
-        animation: fadeIn 2.5s ease-in;
-    }
+  .animation {
+    animation: fadeIn 2.5s ease-in;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.3);
-        transform-origin: right;
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    transform-origin: right;
+  }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-        transform-origin: right;
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: right;
+  }
 }
 
 .slider-2__biggest-sperm,
@@ -111,20 +111,19 @@
 .slider-2__small-sperm,
 .slider-2__smallest-sperm,
 .slider-2__short-sperm {
-    opacity: 0;
+  opacity: 0;
 }
 
 .slider-2__long-text::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  .slider-2__long-text::-webkit-scrollbar-track {
-    background-color: #e6e3e3;
-    border-radius: 100px;
-  }
-  
-  .slider-2__long-text::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    background-color: rgb(239,99,152);
-  }
-  
+  width: 20px;
+}
+
+.slider-2__long-text::-webkit-scrollbar-track {
+  background-color: #e6e3e3;
+  border-radius: 100px;
+}
+
+.slider-2__long-text::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: rgb(239, 99, 152);
+}
