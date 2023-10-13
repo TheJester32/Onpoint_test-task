@@ -1,25 +1,24 @@
-.bigSlider-wrapper{
-    height: 100%;
-    z-index: 10;
-    position: relative;
+.bigSlider-wrapper {
+  height: 100%;
+  z-index: 10;
+  position: relative;
 
-    &__global-home{
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        cursor: pointer;
-        position: absolute;
-        top: 41px;
-        left: 90px;
+  &__global-home {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    top: 41px;
+    left: 90px;
+  }
+  &__global-text {
+    position: absolute;
+    top: 40px;
+    left: 134px;
+  }
 
-    }
-    &__global-text{
-        position: absolute;
-        top: 40px;
-        left: 134px;
-    }
-
-    &__main-logo{
-        position: absolute;
-        top: 730px;
-        left: 80px;
-    }
+  &__main-logo {
+    position: absolute;
+    top: 730px;
+    left: 80px;
+  }
 }
