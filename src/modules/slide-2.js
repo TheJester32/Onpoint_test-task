@@ -16,13 +16,6 @@ export default function observeAnimatedPics() {
         entry.target.classList.remove('animation');
         entry.target.style.opacity = 0;
       }
-      // if (document.querySelector('.slider__slider-line').style.transform.includes(`translate3d(${SLIDER_WIDTH}px, 0, 0)`) === true) {
-      //   console.log("test")
-      //   entry.target.classList.remove('animation');
-      //   entry.target.style.opacity = 0;
-      // } else {
-      //   console.log(document.querySelector('.slider__slider-line').style.transform)
-      // }
     });
   });
     animatedItems.forEach(item => {
